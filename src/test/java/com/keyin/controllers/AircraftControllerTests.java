@@ -69,6 +69,8 @@ public class AircraftControllerTests {
         aircraftController.updateAircraftByID(1,"Airbus A220-300","Scott's Airline",132);
         // The expected aircraft
         Aircraft eac = new Aircraft(1,"Airbus A220-300","Scott's Airline",132);
+        // The below might require an override of the equals method for aircraft
+        // We check if the expected aircraft is equal to the actual aircraft
         Assertions.assertEquals(aircraftController.aircraftController.aircraftService.aircraftMap.get(1), eac);
     }
 
