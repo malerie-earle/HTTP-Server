@@ -1,0 +1,142 @@
+[
+  {
+    "aircraft_ID": 1,
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "airline": "Air Canada",
+    "capacity": 160
+  },
+  {
+    "aircraft_ID": 2,
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "airline": "WestJet",
+    "capacity": 180
+  },
+  {
+    "aircraft_ID": 3,
+    "model": "Bombardier Dash 8 Q400",
+    "manufacturer": "De Havilland Canada (Bombardier)",
+    "airline": "Air Canada Express",
+    "capacity": 78
+  },
+  {
+    "aircraft_ID": 4,
+    "model": "Boeing 777",
+    "manufacturer": "Boeing",
+    "airline": "Air Canada",
+    "capacity": 300
+  },
+  {
+    "aircraft_ID": 5,
+    "model": "Boeing 787 Dreamliner",
+    "manufacturer": "Boeing",
+    "airline": "Air Canada",
+    "capacity": 250
+  },
+  {
+    "aircraft_ID": 6,
+    "model": "Airbus A220",
+    "manufacturer": "Airbus (formerly Bombardier CSeries)",
+    "airline": "Air Canada",
+    "capacity": 135
+  },
+  {
+    "aircraft_ID": 7,
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "airline": "WestJet",
+    "capacity": 250
+  },
+  {
+    "aircraft_ID": 8,
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "airline": "Air Transat",
+    "capacity": 335
+  },
+  {
+    "aircraft_ID": 9,
+    "model": "Embraer E175",
+    "manufacturer": "Embraer",
+    "airline": "Air Canada Express",
+    "capacity": 76
+  },
+  {
+    "aircraft_ID": 10,
+    "model": "Bombardier CRJ Series",
+    "manufacturer": "Bombardier",
+    "airline": "Air Canada Jazz",
+    "capacity": 50
+  },
+  {
+    "aircraft_ID": 11,
+    "model": "Boeing 737 MAX",
+    "manufacturer": "Boeing",
+    "airline": "WestJet",
+    "capacity": 172
+  },
+  {
+    "aircraft_ID": 12,
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "airline": "Air Canada Rouge",
+    "capacity": 200
+  },
+  {
+    "aircraft_ID": 13,
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "airline": "Air Canada Cargo",
+    "capacity": 400
+  },
+  {
+    "aircraft_ID": 14,
+    "model": "Airbus A319",
+    "manufacturer": "Airbus",
+    "airline": "Air Canada",
+    "capacity": 144
+  },
+  {
+    "aircraft_ID": 15,
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "airline": "Air Canada Rouge",
+    "capacity": 200
+  },
+  {
+    "aircraft_ID": 16,
+    "model": "Bombardier Global 6000",
+    "manufacturer": "Bombardier",
+    "airline": "Air Canada Jetz",
+    "capacity": 13
+  },
+  {
+    "aircraft_ID": 17,
+    "model": "Airbus A330neo",
+    "manufacturer": "Airbus",
+    "airline": "Air Transat",
+    "capacity": 375
+  },
+  {
+    "aircraft_ID": 18,
+    "model": "Boeing 767 Freighter",
+    "manufacturer": "Boeing",
+    "airline": "Cargojet Airways",
+    "capacity": 420
+  },
+  {
+    "aircraft_ID": 19,
+    "model": "De Havilland Canada Dash 7",
+    "manufacturer": "De Havilland Canada",
+    "airline": "Air BC",
+    "capacity": 50
+  },
+  {
+    "aircraft_ID": 20,
+    "model": "Cessna Citation X",
+    "manufacturer": "Cessna",
+    "airline": "Private/Corporate",
+    "capacity": 8
+  }
+]
