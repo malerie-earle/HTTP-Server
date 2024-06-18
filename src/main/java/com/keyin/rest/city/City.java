@@ -8,13 +8,13 @@ public class City {
     private long city_ID;
     private String name;
     private String province;
-    private ArrayList<Airport> airports;
+    private Airport airport;
 
-    public City(long city_ID, String name, String province, ArrayList<Airport> airports) {
+    public City(long city_ID, String name, String province, Airport airport) {
         this.city_ID = city_ID;
         this.name = name;
         this.province = province;
-        this.airports = airports;
+        this.airport = airport;
     }
 
     public long getCity_ID() {
@@ -41,12 +41,12 @@ public class City {
         this.province = province;
     }
 
-    public ArrayList<Airport> getAirport() {
-        return airports;
+    public Airport getAirport() {
+        return airport;
     }
 
-    public void setAirport(ArrayList<Airport> airports) {
-        this.airports = airports;
+    public void setAirport(Airport airport) {
+        this.airport = airport;
     }
 }
 

@@ -12,8 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class FlightGenerator {
 
+
+public class FlightGenerator {
+/*
     // Sample JSON file paths
     private static final String CITIES_JSON_FILE = "cities.json";
     private static final String AIRCRAFTS_JSON_FILE = "aircrafts.json";
@@ -80,6 +82,8 @@ public class FlightGenerator {
         return flights;
     }
 
+
+
     // Example main method to demonstrate usage
     public static void main(String[] args) {
         FlightGenerator generator = new FlightGenerator();
@@ -92,4 +96,6 @@ public class FlightGenerator {
             System.out.println(flight.toString()); // Example of printing flight details
         }
     }
+
+ */
 }
