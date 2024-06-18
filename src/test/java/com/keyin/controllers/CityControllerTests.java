@@ -1,16 +1,15 @@
 package com.keyin.controllers;
 
-import com.keyin.rest.city.City;
-import com.keyin.rest.city.CityController;
+import com.keyin.rest.location.City;
+import com.keyin.rest.location.LocationController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class CityControllerTests {
-    private CityController cityController = new CityController();
+    private LocationController cityController = new LocationController();
 
     // Testing the ability to create city. Note that other tests will fail if this one fails.
     @Test
