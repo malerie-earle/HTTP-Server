@@ -2,6 +2,8 @@ package com.keyin.rest.city;
 
 import com.keyin.rest.airport.Airport;
 
+import java.util.ArrayList;
+
 public class City {
     private long city_ID;
     private String name;
