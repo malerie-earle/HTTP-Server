@@ -10,11 +10,11 @@ public class City {
     private String province;
     private ArrayList<Airport> airports;
 
-    public City(long city_ID, String name, String province, Airport[] airports) {
+    public City(long city_ID, String name, String province, ArrayList<Airport> airports) {
         this.city_ID = city_ID;
         this.name = name;
         this.province = province;
-        this.airports = new ArrayList<>();
+        this.airports = airports;
     }
 
     public long getCity_ID() {
