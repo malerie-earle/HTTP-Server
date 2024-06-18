@@ -2,17 +2,19 @@ package com.keyin.rest.city;
 
 import com.keyin.rest.airport.Airport;
 
+import java.util.ArrayList;
+
 public class City {
     private long city_ID;
     private String name;
     private String province;
-    private Airport airport;
+    private ArrayList<Airport> airports;
 
-    public City(long city_ID, String name, String province, Airport airport) {
+    public City(long city_ID, String name, String province, Airport[] airports) {
         this.city_ID = city_ID;
         this.name = name;
         this.province = province;
-        this.airport = airport;
+        this.airports = new ArrayList<>();
     }
 
     public long getCity_ID() {
@@ -39,12 +41,12 @@ public class City {
         this.province = province;
     }
 
-    public Airport getAirport() {
-        return airport;
+    public ArrayList<Airport> getAirport() {
+        return airports;
     }
 
-    public void setAirport(Airport airport) {
-        this.airport = airport;
+    public void setAirport(ArrayList<Airport> airports) {
+        this.airports = airports;
     }
 }
 
