@@ -1,7 +1,7 @@
 package com.keyin.models;
 
 import com.keyin.rest.airport.Airport;
-import com.keyin.rest.city.City;
+import com.keyin.rest.location.City;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
