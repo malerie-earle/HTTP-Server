@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,9 +25,21 @@ public class CityService {
         return List.copyOf(cityMap.values());
     }
 
-    // GETTING A SPECIFIC CITY BY INDEX
+    // CITY SEARCH BY INDEX
     public City getCity(Integer index) {
         return cityMap.get(index);
+    }
+
+    // CITY SEARCH BY PROVINCE
+    public List<City> findCityByProvince(String province) {
+        List<City> citiesFound = new ArrayList<City>();
+        for (City city : cityMap.values()) {
+            if (city.getProvince().equalsIgnoreCase(province)) {
+                citiesFound.add(city);
+            }
+        }
+        return citiesFound;
+
     }
 
     // DELETING A SPECIFIC CITY
@@ -47,5 +60,6 @@ public class CityService {
 
         return cityToUpdate;
     }
+
 
 }
