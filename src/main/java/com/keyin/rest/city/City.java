@@ -41,11 +41,11 @@ public class City {
         this.province = province;
     }
 
-    public ArrayList<Airport> getAirport() {
+    public ArrayList<Airport> getAirports() {
         return airports;
     }
 
-    public void setAirport(ArrayList<Airport> airports) {
+    public void setAirports(ArrayList<Airport> airports) {
         this.airports = airports;
     }
 }
