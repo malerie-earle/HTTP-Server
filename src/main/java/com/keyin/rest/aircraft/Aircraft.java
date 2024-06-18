@@ -1,11 +1,16 @@
 package com.keyin.rest.aircraft;
 
+import com.keyin.rest.seat.Seat;
+
 public class Aircraft {
     long aircraft_ID;
     String model;
     String manufacturer;
     String airline;
     int capacity;
+    Seat[][] seatingChart;
+
+
 
     public Aircraft(long aircraft_ID, String model, String manufacturer, String airline, int capacity) {
         this.aircraft_ID = aircraft_ID;
@@ -13,6 +18,8 @@ public class Aircraft {
         this.manufacturer = manufacturer;
         this.airline = airline;
         this.capacity = capacity;
+        this.seatingChart = seatingChart; // Initialize the new field
+
     }
 
     public long getAircraft_ID() {
@@ -53,5 +60,13 @@ public class Aircraft {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public Seat[][] getSeatingChart() {
+        return seatingChart;
+    }
+
+    public void setSeatingChart(Seat[][] seatingChart) {
+        this.seatingChart = seatingChart;
     }
 }
