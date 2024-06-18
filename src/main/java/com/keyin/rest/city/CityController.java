@@ -27,6 +27,11 @@ public class CityController {
         return cityService.getCity(index);
     }
 
+    @GetMapping("search_city")
+    public List<City> findCityByProvince(@RequestParam(value = "province", required = false) String province){
+        return cityService.findCityByProvince(province);
+    }
+
     @PutMapping ("city/{index}")
     public City updateCity(@PathVariable Integer index, @RequestBody City updatedCity){
         return cityService.updateCity(index, updatedCity);
