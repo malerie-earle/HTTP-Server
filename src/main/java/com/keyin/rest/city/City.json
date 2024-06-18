@@ -1,0 +1,107 @@
+[
+  {
+    "city_ID": 1,
+    "name": "Toronto",
+    "province": "Ontario"
+  },
+  {
+    "city_ID": 2,
+    "name": "Vancouver",
+    "province": "British Columbia"
+  },
+  {
+    "city_ID": 3,
+    "name": "Montréal",
+    "province": "Quebec"
+  },
+  {
+    "city_ID": 4,
+    "name": "Calgary",
+    "province": "Alberta"
+  },
+  {
+    "city_ID": 5,
+    "name": "Edmonton",
+    "province": "Alberta"
+  },
+  {
+    "city_ID": 6,
+    "name": "Ottawa",
+    "province": "Ontario"
+  },
+  {
+    "city_ID": 7,
+    "name": "Halifax",
+    "province": "Nova Scotia"
+  },
+  {
+    "city_ID": 8,
+    "name": "Québec City",
+    "province": "Quebec"
+  },
+  {
+    "city_ID": 9,
+    "name": "Winnipeg",
+    "province": "Manitoba"
+  },
+  {
+    "city_ID": 10,
+    "name": "Victoria",
+    "province": "British Columbia"
+  },
+  {
+    "city_ID": 11,
+    "name": "Kelowna",
+    "province": "British Columbia"
+  },
+  {
+    "city_ID": 12,
+    "name": "Saskatoon",
+    "province": "Saskatchewan"
+  },
+  {
+    "city_ID": 13,
+    "name": "Regina",
+    "province": "Saskatchewan"
+  },
+  {
+    "city_ID": 14,
+    "name": "London",
+    "province": "Ontario"
+  },
+  {
+    "city_ID": 15,
+    "name": "St. John's",
+    "province": "Newfoundland and Labrador"
+  },
+  {
+    "city_ID": 16,
+    "name": "Charlottetown",
+    "province": "Prince Edward Island"
+  },
+  {
+    "city_ID": 17,
+    "name": "Fredericton",
+    "province": "New Brunswick"
+  },
+  {
+    "city_ID": 18,
+    "name": "Saint John",
+    "province": "New Brunswick"
+  },
+  {
+    "city_ID": 19,
+    "name": "Gander",
+    "province": "Newfoundland and Labrador"
+  },
+  {
+    "city_ID": 20,
+    "name": "Fort McMurray",
+    "province": "Alberta"
+  },
+  {
+    "city_ID": 21,
+    "name": "Thunder Bay",
+    "province": "Ontario"
+  }
+]
