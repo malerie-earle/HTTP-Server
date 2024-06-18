@@ -1,4 +1,4 @@
-package com.keyin.rest.city;
+package com.keyin.rest.location;
 
 public class CityController {
 }

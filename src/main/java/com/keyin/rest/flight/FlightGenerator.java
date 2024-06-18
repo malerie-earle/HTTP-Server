@@ -2,8 +2,7 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.aircraft.Aircraft;
 import com.keyin.rest.airport.Airport;
-import com.keyin.rest.city.City;
-import com.keyin.rest.flight.Flight;
+import com.keyin.rest.location.Location;
 import com.keyin.rest.DataReader;
 
 import java.io.IOException;
@@ -21,7 +20,7 @@ public class FlightGenerator {
 
     private List<Airport> airports;
     private List<Aircraft> aircrafts;
-    private List<City> cities;
+    private List<Location> cities;
 
     public FlightGenerator() {
         try {
@@ -35,7 +34,7 @@ public class FlightGenerator {
     }
 
     // Constructor to initialize JSON lists (replace with actual data loading)
-    public FlightGenerator(List<Airport> airports, List<Aircraft> aircrafts, List<City> cities) {
+    public FlightGenerator(List<Airport> airports, List<Aircraft> aircrafts, List<Location> cities) {
         this.airports = airports;
         this.aircrafts = aircrafts;
         this.cities = cities;
