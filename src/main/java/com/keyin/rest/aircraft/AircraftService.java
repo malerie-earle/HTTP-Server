@@ -1,6 +1,5 @@
 package com.keyin.rest.aircraft;
 
-import com.keyin.rest.city.City;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

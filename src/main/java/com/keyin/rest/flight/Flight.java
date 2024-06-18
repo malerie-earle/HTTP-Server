@@ -2,7 +2,6 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.airport.Airport;
 import com.keyin.rest.aircraft.Aircraft;
-import com.keyin.rest.city.City;
 
 import java.time.LocalDateTime;
 
