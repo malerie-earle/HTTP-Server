@@ -1,8 +1,6 @@
 package com.keyin.rest.airport;
 
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +23,27 @@ public class AirportService {
     // AIRPORT SEARCH BY INDEX
     public Airport getAirport(Integer index) {
         return airportMap.get(index);
+    }
+
+    // UPDATING A SPECIFIC AIRPORT
+    public Airport updateAirport(Integer index, Airport updatedAirport) {
+        if(airportMap.get(index) != null){
+            Airport airportToUpdate = airportMap.get(index);
+
+            airportToUpdate.setAirport_ID(updatedAirport.getAirport_ID());
+            airportToUpdate.setCode(updatedAirport.getCode());
+            airportToUpdate.setName(updatedAirport.getName());
+
+            airportMap.put(index, airportToUpdate);
+
+            return airportToUpdate;
+        }
+        return null;
+    }
+
+    // DELETING A SPECIFIC Airport
+    public void deleteAirport(Integer index) {
+        airportMap.remove(index);
     }
 
 }

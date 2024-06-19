@@ -29,4 +29,14 @@ public class AirportController {
         return airportService.getAirport(index);
     }
 
+    @PutMapping ("airport/{index}")
+    public Airport updateAirport(@PathVariable Integer index, @RequestBody Airport updatedAirport){
+        return airportService.updateAirport(index, updatedAirport);
+    }
+
+    @DeleteMapping ("airport/{index}")
+    public void deleteAirport(@PathVariable Integer index){
+        airportService.deleteAirport(index);
+    }
+
 }
