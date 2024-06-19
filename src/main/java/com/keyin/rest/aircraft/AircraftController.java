@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin
 public class AircraftController {
     @Autowired
-    private AircraftService aircraftService;
+    private AircraftService aircraftService = new AircraftService();
 
     @PostMapping("aircraft")
     public Aircraft createAircraft (@RequestBody Aircraft newAircraft){
