@@ -3,11 +3,11 @@
     "airport_ID": 1,
     "code": "YYZ",
     "name": "Toronto Pearson International Airport",
-    "location": {
-      "location_ID": 1,
-      "city": "Toronto",
-      "province": "Ontario"
-    }
+//    "location": {
+//      "location_ID": 1,
+//      "city": "Toronto",
+//      "province": "Ontario"
+//    }
   },
   {
     "airport_ID": 2,

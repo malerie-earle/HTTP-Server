@@ -4,14 +4,14 @@ public class Airport {
     private long airport_ID;
     private String code;
     private String name;
-    private String location;
+//    private String location;
 
 
     public Airport(long airport_ID, String code, String name, String location) {
         this.airport_ID = airport_ID;
         this.code = code;
         this.name = name;
-        this.location = location;
+//        this.location = location;
     }
 
     public long getAirport_ID() {
@@ -38,12 +38,12 @@ public class Airport {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
-    }
+//    public String getLocation() {
+//        return location;
+//    }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+//    public void setLocation(String location) {
+//        this.location = location;
+//    }
 }
 
