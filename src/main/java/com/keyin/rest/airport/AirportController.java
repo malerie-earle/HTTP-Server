@@ -24,4 +24,9 @@ public class AirportController {
         return airportService.getAllAirports();
     }
 
+    @GetMapping("airport/{index}")
+    public Airport getAirport(@PathVariable Integer index){
+        return airportService.getAirport(index);
+    }
+
 }

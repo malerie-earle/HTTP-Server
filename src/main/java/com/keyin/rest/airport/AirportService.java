@@ -14,13 +14,17 @@ public class AirportService {
     // ADDING A NEW AIRPORT
     public Airport createAirport(Airport newAirport) {
         airportMap.put(airportMap.size() + 1, newAirport);
-
         return newAirport;
     }
 
     // LOADING ALL AIRPORTS
     public List<Airport> getAllAirports() {
         return List.copyOf(airportMap.values());
+    }
+
+    // AIRPORT SEARCH BY INDEX
+    public Airport getAirport(Integer index) {
+        return airportMap.get(index);
     }
 
 }
