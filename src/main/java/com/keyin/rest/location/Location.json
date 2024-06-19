@@ -1,15 +1,14 @@
 [
   {
-    "city_ID": 1,
-    "name": "Toronto",
+    "location_ID": 1,
+    "city": "Toronto",
     "province": "Ontario",
-    "airports": [
+    "airports":
       {
         "airport_ID": 1,
         "code": "YYZ",
         "name": "Toronto Pearson International Airport"
       }
-    ]
   },
   {
     "city_ID": 2,
