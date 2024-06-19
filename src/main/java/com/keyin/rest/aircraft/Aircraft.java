@@ -69,4 +69,23 @@ public class Aircraft {
         this.seatingChart = seatingChart;
     }
  */
+
+    @Override
+    public boolean equals(Object o){
+        //  If we are comparing it to itself, we return true
+        if(o == this){
+            return true;
+        }
+        // If other object is not aircraft, we return false
+        if (!(o instanceof Aircraft)) {
+            return false;
+        }
+        // Else, we compare attributes
+        Aircraft otherAircraft = (Aircraft) o;
+
+        if(this.aircraft_ID != otherAircraft.getAircraft_ID() || this.model != otherAircraft.getModel() || this.manufacturer != otherAircraft.manufacturer || this.airline != otherAircraft.getAirline() || this.capacity != otherAircraft.capacity){
+            return false;
+        }
+        return true;
+    }
 }
