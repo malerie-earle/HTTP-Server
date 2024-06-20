@@ -2,7 +2,6 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.aircraft.Aircraft;
 import com.keyin.rest.airport.Airport;
-import com.keyin.rest.location.Location;
 import com.keyin.rest.DataReader;
 
 import java.io.IOException;

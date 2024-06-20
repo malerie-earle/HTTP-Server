@@ -8,15 +8,10 @@ import java.util.List;
 
 import com.keyin.rest.aircraft.Aircraft;
 import com.keyin.rest.airport.Airport;
-import com.keyin.rest.location.Location;
 
 public class DataReader {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
-
-    public static List<Location> loadCitiesFromJson(String jsonFilePath) throws IOException {
-        return objectMapper.readValue(new File(jsonFilePath), new TypeReference<List<Location>>() {});
-    }
 
     public static List<Aircraft> loadAircraftsFromJson(String jsonFilePath) throws IOException {
         return objectMapper.readValue(new File(jsonFilePath), new TypeReference<List<Aircraft>>() {});

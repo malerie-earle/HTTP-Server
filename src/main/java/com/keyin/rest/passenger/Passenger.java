@@ -7,7 +7,6 @@ public class Passenger {
     private String first_name;
     private String last_name;
     private String email;
-    private Seat seat;
 
 
     public Passenger(long passenger_ID, String first_name, String last_name, String email, String phone_number) {
