@@ -2,24 +2,24 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.airport.Airport;
 import com.keyin.rest.aircraft.Aircraft;
+import com.keyin.rest.booking.Booking;
 
 import java.time.LocalDateTime;
 
 public class Flight {
     private long flight_ID;
-    private String flight_number;
-    private Airport departure;
-    private Airport arrival;
+    private Airport origin;
+    private Airport destination;
     private Aircraft aircraft;
     private LocalDateTime departure_time;
     private LocalDateTime arrival_time;
-    private Status status;
+    private Status status; // Enum or string
+    private Booking[][] flightBookings;
 
     public Flight(long flight_ID, String flight_number, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
         this.flight_ID = flight_ID;
-        this.flight_number = flight_number;
-        this.departure = departure;
-        this.arrival = arrival;
+        this.origin = origin;
+        this.destination = destination;
         this.aircraft = aircraft;
         this.departure_time = departure_time;
         this.arrival_time = arrival_time;
@@ -35,28 +35,20 @@ public class Flight {
         this.flight_ID = flight_ID;
     }
 
-    public String getFlight_number() {
-        return flight_number;
+    public Airport getOrigin() {
+        return origin;
     }
 
-    public void setFlight_number(String flight_number) {
-        this.flight_number = flight_number;
+    public void setOrigin(Airport origin) {
+        this.origin = origin;
     }
 
-    public Airport getDeparture() {
-        return departure;
+    public Airport getDestination() {
+        return destination;
     }
 
-    public void setDeparture(Airport departure) {
-        this.departure = departure;
-    }
-
-    public Airport getArrival() {
-        return arrival;
-    }
-
-    public void setArrival(Airport arrival) {
-        this.arrival = arrival;
+    public void setDestination(Airport destination) {
+        this.destination = destination;
     }
 
     public Aircraft getAircraft() {
