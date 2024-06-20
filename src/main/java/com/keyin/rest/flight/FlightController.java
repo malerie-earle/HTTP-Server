@@ -1,8 +1,11 @@
 package com.keyin.rest.flight;
 
+import com.keyin.rest.aircraft.Aircraft;
+import com.keyin.rest.airport.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -12,7 +15,9 @@ public class FlightController {
     private FlightService flightService = new FlightService();
 
     @PostMapping("flight")
-    public Flight createFlight (@RequestBody Flight newFlight){
+    public Flight createFlight (@RequestBody long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Flight.Status status){
+        Flight newFlight = new Flight(flight_ID, departure, arrival, aircraft, departure_time, arrival_time, status);
+        newFlight.setBookings(new Bookings[aircraft.getRows()][aircraft.getCols()]);
         return flightService.createNewFlight(newFlight);
     }
 
