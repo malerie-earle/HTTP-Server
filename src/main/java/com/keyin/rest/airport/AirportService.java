@@ -1,5 +1,6 @@
 package com.keyin.rest.airport;
 
+
 import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +33,6 @@ public class AirportService {
 
             airportToUpdate.setAirport_ID(updatedAirport.getAirport_ID());
             airportToUpdate.setCode(updatedAirport.getCode());
-            airportToUpdate.setName(updatedAirport.getName());
 
             airportMap.put(index, airportToUpdate);
 
