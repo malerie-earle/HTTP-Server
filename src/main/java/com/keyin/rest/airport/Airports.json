@@ -3,210 +3,147 @@
     "airport_ID": 1,
     "code": "YYZ",
     "name": "Toronto Pearson International Airport",
-//    "location": {
-//      "location_ID": 1,
-//      "city": "Toronto",
-//      "province": "Ontario"
-//    }
+    "city": "Toronto",
+    "province": "Ontario"
   },
   {
     "airport_ID": 2,
     "code": "YVR",
     "name": "Vancouver International Airport",
-    "location": {
-      "location_ID": 2,
-      "city": "Vancouver",
-      "province": "British Columbia"
-    }
+    "city": "Vancouver",
+    "province": "British Columbia"
   },
   {
     "airport_ID": 3,
     "code": "YUL",
     "name": "Montréal-Pierre Elliott Trudeau International Airport",
-    "location": {
-      "location_ID": 3,
-      "city": "Montréal",
-      "province": "Quebec"
-    }
+    "city": "Montréal",
+    "province": "Quebec"
   },
   {
     "airport_ID": 4,
     "code": "YYC",
     "name": "Calgary International Airport",
-    "location": {
-      "location_ID": 4,
-      "city": "Calgary",
-      "province": "Alberta"
-    }
+    "city": "Calgary",
+    "province": "Alberta"
   },
   {
     "airport_ID": 5,
     "code": "YEG",
     "name": "Edmonton International Airport",
-    "location": {
-      "location_ID": 5,
-      "city": "Edmonton",
-      "province": "Alberta"
-    }
+    "city": "Edmonton",
+    "province": "Alberta"
   },
   {
     "airport_ID": 6,
     "code": "YOW",
     "name": "Ottawa Macdonald-Cartier International Airport",
-    "location": {
-      "location_ID": 6,
-      "city": "Ottawa",
-      "province": "Ontario"
-    }
+    "city": "Ottawa",
+    "province": "Ontario"
   },
   {
     "airport_ID": 7,
     "code": "YHZ",
     "name": "Halifax Stanfield International Airport",
-    "location": {
-      "location_ID": 7,
-      "city": "Halifax",
-      "province": "Nova Scotia"
-    }
+    "city": "Halifax",
+    "province": "Nova Scotia"
   },
   {
     "airport_ID": 8,
     "code": "YQB",
     "name": "Québec Location Jean Lesage International Airport",
-    "location": {
-      "location_ID": 8,
-      "city": "Québec Location",
-      "province": "Quebec"
-    }
+    "city": "Québec Location",
+    "province": "Quebec"
   },
   {
     "airport_ID": 9,
     "code": "YWG",
     "name": "Winnipeg James Armstrong Richardson International Airport",
-    "location": {
-      "location_ID": 9,
-      "city": "Winnipeg",
-      "province": "Manitoba"
-    }
+    "city": "Winnipeg",
+    "province": "Manitoba"
   },
   {
     "airport_ID": 10,
     "code": "YYJ",
     "name": "Victoria International Airport",
-    "location": {
-      "location_ID": 10,
-      "city": "Victoria",
-      "province": "British Columbia"
-    }
+    "city": "Victoria",
+    "province": "British Columbia"
   },
   {
     "airport_ID": 11,
     "code": "YLW",
     "name": "Kelowna International Airport",
-    "location": {
-      "location_ID": 11,
-      "city": "Kelowna",
-      "province": "British Columbia"
-    }
+    "city": "Kelowna",
+    "province": "British Columbia"
   },
   {
     "airport_ID": 12,
     "code": "YXE",
     "name": "Saskatoon John G. Diefenbaker International Airport",
-    "location": {
-      "location_ID": 12,
-      "city": "Saskatoon",
-      "province": "Saskatchewan"
-    }
+    "city": "Saskatoon",
+    "province": "Saskatchewan"
   },
   {
     "airport_ID": 13,
     "code": "YQR",
     "name": "Regina International Airport",
-    "location": {
-      "location_ID": 13,
-      "city": "Regina",
-      "province": "Saskatchewan"
-    }
+    "city": "Regina",
+    "province": "Saskatchewan"
   },
   {
     "airport_ID": 14,
     "code": "YXU",
     "name": "London International Airport",
-    "location": {
-      "location_ID": 14,
-      "city": "London",
-      "province": "Ontario"
-    }
+    "city": "London",
+    "province": "Ontario"
   },
   {
     "airport_ID": 15,
     "code": "YYT",
     "name": "St. John's International Airport",
-    "location": {
-      "location_ID": 15,
-      "city": "St. John's",
-      "province": "Newfoundland and Labrador"
-    }
+    "city": "St. John's",
+    "province": "Newfoundland and Labrador"
   },
   {
     "airport_ID": 16,
     "code": "YYG",
     "name": "Charlottetown Airport",
-    "location": {
-      "location_ID": 16,
-      "city": "Charlottetown",
-      "province": "Prince Edward Island"
-    }
+    "city": "Charlottetown",
+    "province": "Prince Edward Island"
   },
   {
     "airport_ID": 17,
     "code": "YFC",
     "name": "Fredericton International Airport",
-    "location": {
-      "location_ID": 17,
-      "city": "Fredericton",
-      "province": "New Brunswick"
-    }
+    "city": "Fredericton",
+    "province": "New Brunswick"
   },
   {
     "airport_ID": 18,
     "code": "YSJ",
     "name": "Saint John Airport",
-    "location": {
-      "location_ID": 18,
-      "city": "Saint John",
-      "province": "New Brunswick"
-    }
+    "city": "Saint John",
+    "province": "New Brunswick"
   },
   {
     "airport_ID": 19,
     "code": "YQX",
     "name": "Gander International Airport",
-    "location": {
-      "location_ID": 19,
-      "city": "Gander",
-      "province": "Newfoundland and Labrador"
-    }
+    "city": "Gander",
+    "province": "Newfoundland and Labrador"
   },
   {
     "airport_ID": 20,
     "code": "YMM",
     "name": "Fort McMurray International Airport",
-    "location": {
-      "location_ID": 20,
-      "city": "Fort McMurray",
-      "province": "Alberta"
-    }
+    "city": "Fort McMurray",
+    "province": "Alberta"
   },
   {
     "airport_ID": 21,
     "code": "YQT",
     "name": "Thunder Bay International Airport",
-    "location": {
-      "location_ID": 21,
-      "city": "Thunder Bay",
-      "province": "Ontario"
-    }
+    "city": "Thunder Bay",
+    "province": "Ontario"
   }
 ]
