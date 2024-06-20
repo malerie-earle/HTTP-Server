@@ -1,16 +1,5 @@
 package com.keyin.rest.flight;
 
-import com.keyin.rest.aircraft.Aircraft;
-import com.keyin.rest.airport.Airport;
-import com.keyin.rest.location.Location;
-import com.keyin.rest.DataReader;
-
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 public class FlightGenerator {
 /*
     // Sample JSON file paths

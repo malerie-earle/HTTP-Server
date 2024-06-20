@@ -9,23 +9,23 @@ import java.time.temporal.ChronoUnit;
 
 public class Flight {
     private long flight_ID;
-    private Airport departure;
-    private Airport arrival;
+    private Airport origin;
+    private Airport destination;
     private Aircraft aircraft;
     private LocalDateTime departure_time;
     private LocalDateTime arrival_time;
-    private Status status;
-    private Booking[][] bookings;
+    private Status status; // Enum or string
+    private Booking[][] flightBookings;
 
     public Flight(long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
         this.flight_ID = flight_ID;
-        this.departure = departure;
-        this.arrival = arrival;
+        this.origin = origin;
+        this.destination = destination;
         this.aircraft = aircraft;
         this.departure_time = departure_time;
         this.arrival_time = arrival_time;
         this.status = status;
-        this.bookings = new Booking[aircraft.getRows()][aircraft.getCols()];
+        this.flightBookings = new Booking[aircraft.getRows()][aircraft.getCols()];
     }
 
     // Getters and Setters
@@ -37,20 +37,21 @@ public class Flight {
         this.flight_ID = flight_ID;
     }
 
-    public Airport getDeparture() {
-        return departure;
+
+    public Airport getOrigin() {
+        return origin;
     }
 
-    public void setDeparture(Airport departure) {
-        this.departure = departure;
+    public void setOrigin(Airport origin) {
+        this.origin = origin;
     }
 
-    public Airport getArrival() {
-        return arrival;
+    public Airport getDestination() {
+        return destination;
     }
 
-    public void setArrival(Airport arrival) {
-        this.arrival = arrival;
+    public void setDestination(Airport destination) {
+        this.destination = destination;
     }
 
     public Aircraft getAircraft() {
@@ -78,11 +79,11 @@ public class Flight {
     }
 
     public void setBookings(Booking[][] bookings) {
-        this.bookings = bookings;
+        this.flightBookings = bookings;
     }
 
     public Booking[][] getBookings() {
-        return bookings;
+        return flightBookings;
     }
 
     public Long getFlightDuration(){
