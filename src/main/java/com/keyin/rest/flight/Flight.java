@@ -17,7 +17,7 @@ public class Flight {
     private Status status; // Enum or string
     private Booking[][] flightBookings;
 
-    public Flight(long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
+    public Flight(long flight_ID, Airport origin, Airport destination, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
         this.flight_ID = flight_ID;
         this.origin = origin;
         this.destination = destination;
@@ -25,7 +25,7 @@ public class Flight {
         this.departure_time = departure_time;
         this.arrival_time = arrival_time;
         this.status = status;
-        this.flightBookings = new Booking[aircraft.getRows()][aircraft.getCols()];
+        this.flightBookings = new Booking[aircraft.getRows()][aircraft.getColumns()];
     }
 
     // Getters and Setters
@@ -104,11 +104,11 @@ public class Flight {
     }
 
     public boolean isOccupied(int row, int col){
-        return bookings[row][col] != null;
+        return flightBookings[row][col] != null;
     }
 
     public void setSeat(int row, int col, Booking booking){
-        bookings[row][col] = booking;
+        flightBookings[row][col] = booking;
     }
 
     /* TO DO
