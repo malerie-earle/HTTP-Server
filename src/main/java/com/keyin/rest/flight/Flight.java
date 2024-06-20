@@ -2,28 +2,29 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.airport.Airport;
 import com.keyin.rest.aircraft.Aircraft;
+import com.keyin.rest.booking.Booking;
 
 import java.time.LocalDateTime;
 
 public class Flight {
     private long flight_ID;
-    private String flight_number;
     private Airport departure;
     private Airport arrival;
     private Aircraft aircraft;
     private LocalDateTime departure_time;
     private LocalDateTime arrival_time;
     private Status status;
+    private Booking[][] bookings;
 
-    public Flight(long flight_ID, String flight_number, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
+    public Flight(long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
         this.flight_ID = flight_ID;
-        this.flight_number = flight_number;
         this.departure = departure;
         this.arrival = arrival;
         this.aircraft = aircraft;
         this.departure_time = departure_time;
         this.arrival_time = arrival_time;
         this.status = status;
+        this.bookings = new Booking[aircraft.getRows()][aircraft.getCols()];
     }
 
     // Getters and Setters
@@ -83,6 +84,14 @@ public class Flight {
         this.arrival_time = arrival_time;
     }
 
+    public void setBookings(Booking[][] bookings) {
+        this.bookings = bookings;
+    }
+
+    public Booking[][] getBookings() {
+        return bookings;
+    }
+
     public Status getStatus() {
         return status;
     }
@@ -95,4 +104,5 @@ public class Flight {
     public enum Status {
         ON_TIME, DELAYED, CANCELED
     }
+
 }

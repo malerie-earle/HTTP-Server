@@ -17,7 +17,7 @@ public class FlightController {
     @PostMapping("flight")
     public Flight createFlight (@RequestBody long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Flight.Status status){
         Flight newFlight = new Flight(flight_ID, departure, arrival, aircraft, departure_time, arrival_time, status);
-        newFlight.setBookings(new Bookings[aircraft.getRows()][aircraft.getCols()]);
+        //newFlight.setBookings(new Bookings[aircraft.getRows()][aircraft.getCols()]);
         return flightService.createNewFlight(newFlight);
     }
 
