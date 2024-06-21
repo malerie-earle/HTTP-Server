@@ -45,13 +45,13 @@ public class FlightController {
     @GetMapping("flight/arriving/{id}")
     public List<Flight> getArrivingFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
-        return allFlights.stream().filter(ap -> ap.getOrigin().getAirport_ID() == id).toList();
+        return allFlights.stream().filter(fl -> fl.getDestination().getAirport_ID() == id).toList();
     }
 
     @GetMapping("flight/departing/{id}")
     public List<Flight> getDepartingFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
-        return allFlights.stream().filter(fl -> fl.getDestination().getAirport_ID() == id).toList();
+        return allFlights.stream().filter(ap -> ap.getOrigin().getAirport_ID() == id).toList();
     }
 
     @GetMapping("flight/airline/{airline}")
