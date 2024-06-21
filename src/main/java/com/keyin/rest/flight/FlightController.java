@@ -6,6 +6,7 @@ import com.keyin.rest.booking.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URLDecoder;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,21 +43,22 @@ public class FlightController {
         return flightService.deleteFlight(id);
     }
 
-    @GetMapping("flight/arriving/{id}")
+    @GetMapping("flights/arriving/{id}")
     public List<Flight> getArrivingFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
         return allFlights.stream().filter(fl -> fl.getDestination().getAirport_ID() == id).toList();
     }
 
-    @GetMapping("flight/departing/{id}")
+    @GetMapping("flights/departing/{id}")
     public List<Flight> getDepartingFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
         return allFlights.stream().filter(ap -> ap.getOrigin().getAirport_ID() == id).toList();
     }
 
-    @GetMapping("flight/airline/{airline}")
+    @GetMapping("flights/airline/{airline}")
     public List<Flight> getFlightByAirLine(@PathVariable String airline){
         List<Flight> allFlights = flightService.getAllFlight();
-        return allFlights.stream().filter(fl -> fl.getAircraft().getAirline().equals(airline)).toList();
+        String decodedAirline = URLDecoder.decode(airline);
+        return allFlights.stream().filter(fl -> fl.getAircraft().getAirline().equals(decodedAirline)).toList();
     }
 }
