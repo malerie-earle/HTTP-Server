@@ -2,6 +2,7 @@ package com.keyin.rest.flight;
 
 import com.keyin.rest.aircraft.Aircraft;
 import com.keyin.rest.airport.Airport;
+import com.keyin.rest.booking.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +17,8 @@ public class FlightController {
     private FlightService flightService = new FlightService();
 
     @PostMapping("flight")
-    public Flight createFlight (@RequestBody long flight_ID, Airport departure, Airport arrival, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Flight.Status status){
-        Flight newFlight = new Flight(flight_ID, departure, arrival, aircraft, departure_time, arrival_time, status);
-        //newFlight.setBookings(new Bookings[aircraft.getRows()][aircraft.getCols()]);
+    public Flight createFlight (@RequestBody Flight newFlight){
+        newFlight.setBookings(new Booking[newFlight.getAircraft().getRows()][newFlight.getAircraft().getColumns()]);
         return flightService.createNewFlight(newFlight);
     }
 

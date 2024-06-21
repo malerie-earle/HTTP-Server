@@ -1,7 +1,5 @@
 package com.keyin.rest.passenger;
 
-import com.keyin.rest.seat.Seat;
-
 public class Passenger {
     private long passenger_ID;
     private String first_name;
