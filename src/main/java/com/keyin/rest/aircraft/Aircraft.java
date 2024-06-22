@@ -131,6 +131,25 @@ public class Aircraft {
         return chart;
     }
 
+    @Override
+    public boolean equals(Object o){
+        //  If we are comparing it to itself, we return true
+        if(o == this){
+            return true;
+        }
+        // If other object is not aircraft, we return false
+        if (!(o instanceof Aircraft)) {
+            return false;
+        }
+        // Else, we set the object/cast the object to be an aircraft, then compare attributes
+        Aircraft otherAircraft = (Aircraft) o;
+
+        if(this.aircraft_ID != otherAircraft.getAircraft_ID() || this.model != otherAircraft.getModel() || this.model != otherAircraft.model || !this.airline.equals(otherAircraft.getAirline()) || this.capacity != otherAircraft.capacity || this.rows != otherAircraft.rows || this.columns != otherAircraft.columns || this.numAisles != otherAircraft.numAisles){
+            return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Aircraft aircraft = new Aircraft(1, "Boeing 737", "Airline X", 150, 30, 6, 1);
         List<String> chart = aircraft.emptySeatingChart();
