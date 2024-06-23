@@ -8,14 +8,14 @@ public class AircraftModelTests {
     // need to change based on contsructor
     @Test
     public void testEquals(){
-        Aircraft ac1 = new Aircraft(1,"A220-300","Airbus Corp","Scott's Airline",132);
-        Aircraft ac2 = new Aircraft(1,"A220-300","Airbus Corp","Scott's Airline",132);
+        Aircraft ac1 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
+        Aircraft ac2 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
         Assertions.assertEquals(ac1, ac2);
     }
     @Test
     public void testNotEquals(){
-        Aircraft ac1 = new Aircraft(1,"A220-300","Airbus Corp","Scott's Airline",132);
-        Aircraft ac2 = new Aircraft(1,"A220-300","Airbus Corp","Not Scott's Airline",132);
+        Aircraft ac1 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
+        Aircraft ac2 = new Aircraft(0,"A220-300","Not Airbus Corp",20,10, 2, 1);
         Assertions.assertNotEquals(ac1, ac2);
     }
 }
