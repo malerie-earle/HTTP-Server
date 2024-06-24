@@ -64,10 +64,10 @@ public class FlightController {
         return allFlights.stream().filter(fl -> fl.getAircraft().getAirline().equals(decodedAirline)).toList();
     }
 
-    @GetMapping("flight/book/{flightId}")
-    public Booking bookFlightByID(@PathVariable Long flightId, @RequestBody Booking booking){
-        Flight targetFlight = flightService.getFlightByID(flightId);
-        if(targetFlight.isOccupied(booking.getSeatRow(), booking.getSeatColumn())){
+    @PostMapping("flight/book")
+    public Booking bookFlightByID(@RequestBody Booking booking){
+        Flight targetFlight = flightService.getFlightByID(booking.getFlight_ID());
+        if(!targetFlight.isOccupied(booking.getSeatRow(), booking.getSeatColumn())){
             Booking newBooking = bookingService.createNewBooking(booking);
             targetFlight.setSeat(newBooking.getSeatRow(), newBooking.getSeatColumn(), booking);
             return newBooking;
@@ -75,4 +75,27 @@ public class FlightController {
             return null;
         }
     }
+
+    @GetMapping("bookings")
+    public List<Booking> getAllBookings(){
+        return bookingService.getAllBooking();
+    }
+
+    @GetMapping("booking/{id}")
+    public Booking getBookingbyBookingID(@PathVariable Integer id){
+        return bookingService.getBookingByID(id);
+    }
+
+    @GetMapping("bookings/passenger/{id}")
+    public List<Booking> getBookingsByPassengerID(@PathVariable Integer id){
+        List<Booking> allBookings = bookingService.getAllBooking();
+        return allBookings.stream().filter(b -> b.getPassenger_ID() == id).toList();
+    }
+
+    @GetMapping("bookings/flight/{id}")
+    public List<Booking> getBookingsByFlightID(@PathVariable Integer id){
+        List<Booking> allBookings = bookingService.getAllBooking();
+        return allBookings.stream().filter(b -> b.getFlight_ID() == id).toList();
+    }
+    
 }

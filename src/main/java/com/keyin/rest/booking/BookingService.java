@@ -36,4 +36,5 @@ public class BookingService {
     public List<Booking> getAllBooking(){
         return List.copyOf(bookingMap.values());
     }
+
 }

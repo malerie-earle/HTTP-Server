@@ -104,11 +104,11 @@ public class Flight {
     }
 
     public boolean isOccupied(int row, int col){
-        return flightBookings[row][col] != null;
+        return flightBookings[row-1][col-1] != null;
     }
 
     public void setSeat(int row, int col, Booking booking){
-        flightBookings[row][col] = booking;
+        flightBookings[row-1][col-1] = booking;
     }
 
     /* TO DO
