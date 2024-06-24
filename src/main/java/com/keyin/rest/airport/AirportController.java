@@ -1,7 +1,5 @@
 package com.keyin.rest.airport;
 
-import com.keyin.rest.airport.Airport;
-import com.keyin.rest.airport.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,19 +22,24 @@ public class AirportController {
         return airportService.getAllAirports();
     }
 
-    @GetMapping("airport/{index}")
-    public Airport getAirport(@PathVariable Integer index){
-        return airportService.getAirport(index);
+    @GetMapping("airport/{id}")
+    public Airport getAirport(@PathVariable Integer id){
+        return airportService.getAirport(id);
     }
 
-    @PutMapping ("airport/{index}")
-    public Airport updateAirport(@PathVariable Integer index, @RequestBody Airport updatedAirport){
-        return airportService.updateAirport(index, updatedAirport);
+    @GetMapping("search_airport")
+    public List<Airport> findAirportByProvinceOrName(@RequestParam(value = "province", required = false) String province, @RequestParam(value = "name", required = false) String name){
+        return airportService.findAirportByProvinceOrName(province, name);
     }
 
-    @DeleteMapping ("airport/{index}")
-    public void deleteAirport(@PathVariable Integer index){
-        airportService.deleteAirport(index);
+    @PutMapping ("airport/{id}")
+    public Airport updateAirport(@PathVariable Integer id, @RequestBody Airport updatedAirport){
+        return airportService.updateAirport(id, updatedAirport);
+    }
+
+    @DeleteMapping ("airport/{id}")
+    public void deleteAirport(@PathVariable Integer id){
+        airportService.deleteAirport(id);
     }
 
 }
