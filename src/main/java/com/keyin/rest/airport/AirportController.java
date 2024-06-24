@@ -24,19 +24,19 @@ public class AirportController {
         return airportService.getAllAirports();
     }
 
-    @GetMapping("airport/{index}")
-    public Airport getAirport(@PathVariable Integer index){
-        return airportService.getAirport(index);
+    @GetMapping("airport/{id}")
+    public Airport getAirport(@PathVariable Integer id){
+        return airportService.getAirport(id);
     }
 
-    @PutMapping ("airport/{index}")
-    public Airport updateAirport(@PathVariable Integer index, @RequestBody Airport updatedAirport){
-        return airportService.updateAirport(index, updatedAirport);
+    @PutMapping ("airport/{id}")
+    public Airport updateAirport(@PathVariable Integer id, @RequestBody Airport updatedAirport){
+        return airportService.updateAirport(id, updatedAirport);
     }
 
-    @DeleteMapping ("airport/{index}")
-    public void deleteAirport(@PathVariable Integer index){
-        airportService.deleteAirport(index);
+    @DeleteMapping ("airport/{id}")
+    public void deleteAirport(@PathVariable Integer id){
+        airportService.deleteAirport(id);
     }
 
 }

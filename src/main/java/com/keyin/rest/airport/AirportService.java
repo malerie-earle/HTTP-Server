@@ -21,20 +21,20 @@ public class AirportService {
         return List.copyOf(airportMap.values());
     }
 
-    // AIRPORT SEARCH BY INDEX
-    public Airport getAirport(Integer index) {
-        return airportMap.get(index);
+    // AIRPORT SEARCH BY ID
+    public Airport getAirport(Integer airport_ID) {
+        return airportMap.get(airport_ID);
     }
 
     // UPDATING A SPECIFIC AIRPORT
-    public Airport updateAirport(Integer index, Airport updatedAirport) {
-        if(airportMap.get(index) != null){
-            Airport airportToUpdate = airportMap.get(index);
+    public Airport updateAirport(Integer airport_ID, Airport updatedAirport) {
+        if(airportMap.get(airport_ID) != null){
+            Airport airportToUpdate = airportMap.get(airport_ID);
 
             airportToUpdate.setAirport_ID(updatedAirport.getAirport_ID());
             airportToUpdate.setCode(updatedAirport.getCode());
 
-            airportMap.put(index, airportToUpdate);
+            airportMap.put(airport_ID, airportToUpdate);
 
             return airportToUpdate;
         }
@@ -42,8 +42,8 @@ public class AirportService {
     }
 
     // DELETING A SPECIFIC Airport
-    public void deleteAirport(Integer index) {
-        airportMap.remove(index);
+    public void deleteAirport(Integer airport_ID) {
+        airportMap.remove(airport_ID);
     }
 
 }
