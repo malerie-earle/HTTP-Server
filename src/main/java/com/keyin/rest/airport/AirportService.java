@@ -33,6 +33,9 @@ public class AirportService {
 
             airportToUpdate.setAirport_ID(updatedAirport.getAirport_ID());
             airportToUpdate.setCode(updatedAirport.getCode());
+            airportToUpdate.setName(updatedAirport.getName());
+            airportToUpdate.setCity(updatedAirport.getCity());
+            airportToUpdate.setProvince(updatedAirport.getProvince());
 
             airportMap.put(airport_ID, airportToUpdate);
 
