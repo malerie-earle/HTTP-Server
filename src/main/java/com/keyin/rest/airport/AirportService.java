@@ -2,6 +2,8 @@ package com.keyin.rest.airport;
 
 
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,6 +49,17 @@ public class AirportService {
     // DELETING A SPECIFIC Airport
     public void deleteAirport(Integer airport_ID) {
         airportMap.remove(airport_ID);
+    }
+
+    // AIRPORT SEARCH BY PROVINCE
+    public List<Airport> findAirportByProvince(String province) {
+        List<Airport> airportsFound = new ArrayList<Airport>();
+        for (Airport airport : airportMap.values()) {
+            if (airport.getProvince().equalsIgnoreCase(province)) {
+                airportsFound.add(airport);
+            }
+        }
+        return airportsFound;
     }
 
 }

@@ -29,6 +29,11 @@ public class AirportController {
         return airportService.getAirport(id);
     }
 
+    @GetMapping("search_airport")
+    public List<Airport> findAirportByProvince(@RequestParam(value = "province", required = false) String province){
+        return airportService.findAirportByProvince(province);
+    }
+
     @PutMapping ("airport/{id}")
     public Airport updateAirport(@PathVariable Integer id, @RequestBody Airport updatedAirport){
         return airportService.updateAirport(id, updatedAirport);
