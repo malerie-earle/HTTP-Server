@@ -1,7 +1,5 @@
 package com.keyin.rest.airport;
 
-import com.keyin.rest.airport.Airport;
-import com.keyin.rest.airport.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,8 +28,8 @@ public class AirportController {
     }
 
     @GetMapping("search_airport")
-    public List<Airport> findAirportByProvince(@RequestParam(value = "province", required = false) String province){
-        return airportService.findAirportByProvince(province);
+    public List<Airport> findAirportByProvinceOrName(@RequestParam(value = "province", required = false) String province, @RequestParam(value = "name", required = false) String name){
+        return airportService.findAirportByProvinceOrName(province, name);
     }
 
     @PutMapping ("airport/{id}")
