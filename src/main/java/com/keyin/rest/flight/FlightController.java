@@ -92,10 +92,11 @@ public class FlightController {
         return allBookings.stream().filter(b -> b.getPassenger_ID() == id).toList();
     }
 
+    //unsure if needed
     @GetMapping("bookings/flight/{id}")
     public List<Booking> getBookingsByFlightID(@PathVariable Integer id){
         List<Booking> allBookings = bookingService.getAllBooking();
         return allBookings.stream().filter(b -> b.getFlight_ID() == id).toList();
     }
-    
+
 }
