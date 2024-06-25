@@ -2,6 +2,7 @@ package com.keyin.rest.aircraft;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
@@ -36,4 +37,15 @@ public class AircraftService {
     public List<Aircraft> getAllAircraft(){
         return List.copyOf(aircraftMap.values());
     }
+
+    public List<Aircraft> findAircraftByAirline(String airline) {
+        List<Aircraft> aircraftsFound = new ArrayList<Aircraft>();
+        for (Aircraft aircraft : aircraftMap.values()) {
+            if (aircraft.getAirline().equalsIgnoreCase(airline)) {
+                aircraftsFound.add(aircraft);
+            }
+        }
+        return aircraftsFound;
+    }
+
 }
