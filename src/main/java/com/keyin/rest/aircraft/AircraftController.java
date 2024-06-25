@@ -26,6 +26,11 @@ public class AircraftController {
         return aircraftService.getAircraftByID(id);
     }
 
+    @GetMapping("search_aircraft")
+    public List<Aircraft> findAircraftByAirline(@RequestParam(value = "airline", required = false) String airline){
+        return aircraftService.findAircraftByAirline(airline);
+    }
+
     @PutMapping("aircraft/{id}")
     public Aircraft updateAircaft(@PathVariable Integer id, @RequestBody Aircraft updatedAircraft){
         return aircraftService.updateAircraftByID(id, updatedAircraft);
