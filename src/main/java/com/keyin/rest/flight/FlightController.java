@@ -85,11 +85,11 @@ public class FlightController {
     @PutMapping("flight/book/update/{id}")
     public Booking updateBooking(@PathVariable Long id, @RequestBody Booking booking){
         Flight targetFlight = flightService.getFlightByID(id);
-        if(targetFlight != null && targetFlight.isOccupied(booking.getSeatRow(), booking.getSeatColumn())){
+        if(targetFlight != null && !targetFlight.isOccupied(booking.getSeatRow(), booking.getSeatColumn())){
             Booking oldBooking = bookingService.getBookingByID(id);
             Booking updatedBooking = bookingService.updateBookingByID(id, booking);
-            targetFlight.setSeat(booking.getSeatRow(), booking.getSeatColumn(), updatedBooking);
             targetFlight.setSeat(oldBooking.getSeatRow(), oldBooking.getSeatColumn(), null);
+            targetFlight.setSeat(booking.getSeatRow(), booking.getSeatColumn(), updatedBooking);
             return updatedBooking;
         }else{
             return null;
