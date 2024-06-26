@@ -8,19 +8,19 @@ import java.util.List;
 
 @Service
 public class BookingService {
-    private Map<Integer, Booking> bookingMap = new HashMap<Integer, Booking>();
+    private Map<Long, Booking> bookingMap = new HashMap<Long, Booking>();
 
     public Booking createNewBooking(Booking newBooking){
         newBooking.setBooking_ID(bookingMap.size());
-        bookingMap.put(bookingMap.size(), newBooking);
+        bookingMap.put((long) bookingMap.size(), newBooking);
         return newBooking;
     }
 
-    public Booking getBookingByID(Integer id){
+    public Booking getBookingByID(Long id){
         return bookingMap.get(id);
     }
 
-    public Booking updateBookingByID(Integer id, Booking updatedBooking){
+    public Booking updateBookingByID(Long id, Booking updatedBooking){
         if(bookingMap.get(id) != null){
             updatedBooking.setBooking_ID(id);
             bookingMap.put(id,updatedBooking);
@@ -29,7 +29,7 @@ public class BookingService {
         return null;
     }
 
-    public Booking deleteBooking(Integer id){
+    public Booking deleteBooking(Long id){
         return bookingMap.remove(id);
     }
 
