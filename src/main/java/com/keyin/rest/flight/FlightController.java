@@ -97,24 +97,12 @@ public class FlightController {
     }
 
     @DeleteMapping ("flight/book/delete/{id}")
-    public Booking deleteBooking(@PathVariable Long id){
+    public Booking deleteBookingByID(@PathVariable Long id){
         Flight targetFlight = flightService.getFlightByID(id);
         if(targetFlight != null){
             Booking deletedBooking = bookingService.deleteBooking(id);
             targetFlight.setSeat(deletedBooking.getSeatRow(), deletedBooking.getSeatColumn(), null);
             return deletedBooking;
-        }else{
-            return null;
-        }
-    }
-
-    @PutMapping("flight/book/delete")
-    public Booking updateBooking(@RequestBody Booking booking){
-        Flight targetFlight = flightService.getFlightByID(booking.getFlight_ID());
-        if(targetFlight != null){
-            Booking updatedBooking = bookingService.updateBookingByID(booking.getBooking_ID(), booking);
-            targetFlight.setSeat(booking.getSeatRow(), booking.getSeatColumn(), updatedBooking);
-            return updatedBooking;
         }else{
             return null;
         }
