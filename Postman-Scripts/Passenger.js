@@ -1,4 +1,4 @@
-const aircrafts = [
+const passengers = [
 {
   "passenger_ID": 1,
   "first_name": "Alice",
@@ -124,7 +124,7 @@ const aircrafts = [
 for (let i = 0; i < aircrafts.length; i++) {
 const aircraft = aircrafts[i];
 pm.sendRequest({
-url: 'http://localhost:8080/aircraft/createAircraft',
+url: 'http://localhost:8080/passenger/',
 method: 'POST',
 header: 'Content-Type:application/json',
 body: JSON.stringify(aircraft)
