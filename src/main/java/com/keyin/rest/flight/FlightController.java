@@ -45,14 +45,14 @@ public class FlightController {
         return flightService.deleteFlight(id);
     }
 
-    @GetMapping("flights/arriving/{id}")
-    public List<Flight> getArrivingFlightsByAirportID(@PathVariable Long id){
+    @GetMapping("flights/destination/{id}")
+    public List<Flight> getDestinationFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
         return allFlights.stream().filter(fl -> fl.getDestination().getAirport_ID() == id).toList();
     }
 
-    @GetMapping("flights/departing/{id}")
-    public List<Flight> getDepartingFlightsByAirportID(@PathVariable Long id){
+    @GetMapping("flights/origin/{id}")
+    public List<Flight> getOriginFlightsByAirportID(@PathVariable Long id){
         List<Flight> allFlights = flightService.getAllFlight();
         return allFlights.stream().filter(ap -> ap.getOrigin().getAirport_ID() == id).toList();
     }
