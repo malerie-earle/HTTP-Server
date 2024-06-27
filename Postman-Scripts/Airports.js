@@ -1,0 +1,166 @@
+const airports = [
+  {
+    "airport_ID": 1,
+    "code": "YYZ",
+    "name": "Toronto Pearson International Airport",
+    "city": "Toronto",
+    "province": "Ontario"
+  },
+  {
+    "airport_ID": 2,
+    "code": "YVR",
+    "name": "Vancouver International Airport",
+    "city": "Vancouver",
+    "province": "British Columbia"
+  },
+  {
+    "airport_ID": 3,
+    "code": "YUL",
+    "name": "Montréal-Pierre Elliott Trudeau International Airport",
+    "city": "Montréal",
+    "province": "Quebec"
+  },
+  {
+    "airport_ID": 4,
+    "code": "YYC",
+    "name": "Calgary International Airport",
+    "city": "Calgary",
+    "province": "Alberta"
+  },
+  {
+    "airport_ID": 5,
+    "code": "YEG",
+    "name": "Edmonton International Airport",
+    "city": "Edmonton",
+    "province": "Alberta"
+  },
+  {
+    "airport_ID": 6,
+    "code": "YOW",
+    "name": "Ottawa Macdonald-Cartier International Airport",
+    "city": "Ottawa",
+    "province": "Ontario"
+  },
+  {
+    "airport_ID": 7,
+    "code": "YHZ",
+    "name": "Halifax Stanfield International Airport",
+    "city": "Halifax",
+    "province": "Nova Scotia"
+  },
+  {
+    "airport_ID": 8,
+    "code": "YQB",
+    "name": "Québec Location Jean Lesage International Airport",
+    "city": "Québec Location",
+    "province": "Quebec"
+  },
+  {
+    "airport_ID": 9,
+    "code": "YWG",
+    "name": "Winnipeg James Armstrong Richardson International Airport",
+    "city": "Winnipeg",
+    "province": "Manitoba"
+  },
+  {
+    "airport_ID": 10,
+    "code": "YYJ",
+    "name": "Victoria International Airport",
+    "city": "Victoria",
+    "province": "British Columbia"
+  },
+  {
+    "airport_ID": 11,
+    "code": "YLW",
+    "name": "Kelowna International Airport",
+    "city": "Kelowna",
+    "province": "British Columbia"
+  },
+  {
+    "airport_ID": 12,
+    "code": "YXE",
+    "name": "Saskatoon John G. Diefenbaker International Airport",
+    "city": "Saskatoon",
+    "province": "Saskatchewan"
+  },
+  {
+    "airport_ID": 13,
+    "code": "YQR",
+    "name": "Regina International Airport",
+    "city": "Regina",
+    "province": "Saskatchewan"
+  },
+  {
+    "airport_ID": 14,
+    "code": "YXU",
+    "name": "London International Airport",
+    "city": "London",
+    "province": "Ontario"
+  },
+  {
+    "airport_ID": 15,
+    "code": "YYT",
+    "name": "St. John's International Airport",
+    "city": "St. John's",
+    "province": "Newfoundland and Labrador"
+  },
+  {
+    "airport_ID": 16,
+    "code": "YYG",
+    "name": "Charlottetown Airport",
+    "city": "Charlottetown",
+    "province": "Prince Edward Island"
+  },
+  {
+    "airport_ID": 17,
+    "code": "YFC",
+    "name": "Fredericton International Airport",
+    "city": "Fredericton",
+    "province": "New Brunswick"
+  },
+  {
+    "airport_ID": 18,
+    "code": "YSJ",
+    "name": "Saint John Airport",
+    "city": "Saint John",
+    "province": "New Brunswick"
+  },
+  {
+    "airport_ID": 19,
+    "code": "YQX",
+    "name": "Gander International Airport",
+    "city": "Gander",
+    "province": "Newfoundland and Labrador"
+  },
+  {
+    "airport_ID": 20,
+    "code": "YMM",
+    "name": "Fort McMurray International Airport",
+    "city": "Fort McMurray",
+    "province": "Alberta"
+  },
+  {
+    "airport_ID": 21,
+    "code": "YQT",
+    "name": "Thunder Bay International Airport",
+    "city": "Thunder Bay",
+    "province": "Ontario"
+  }
+];
+ for (let i = 0; i < airports.length; i++) {
+   const airport = airports[i];
+   pm.sendRequest({
+     url: 'http://localhost:8080/airport',
+     method: 'POST',
+     header: 'Content-Type:application/json',
+     body: JSON.stringify(airport)
+   }, function (err, response) {
+     if (err) {
+       console.error(err);
+       return;
+     }
+
+     console.log(response.body);
+   });
+ }
+
