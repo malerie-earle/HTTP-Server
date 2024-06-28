@@ -9,19 +9,20 @@ import java.util.List;
 
 @Service
 public class AircraftService {
-    private Map<Integer, Aircraft> aircraftMap = new HashMap<Integer, Aircraft>();
-
+    private Map<Long, Aircraft> aircraftMap = new HashMap<Long, Aircraft>();
+    private long id = 1;
     public Aircraft createNewAircraft(Aircraft newAircraft){
-        newAircraft.setAircraft_ID(aircraftMap.size());
-        aircraftMap.put(aircraftMap.size(), newAircraft);
+        newAircraft.setAircraft_ID(id);
+        aircraftMap.put(id, newAircraft);
+        id++;
         return newAircraft;
     }
 
-    public Aircraft getAircraftByID(Integer id){
+    public Aircraft getAircraftByID(Long id){
         return aircraftMap.get(id);
     }
 
-    public Aircraft updateAircraftByID(Integer id, Aircraft updatedAircraft){
+    public Aircraft updateAircraftByID(Long id, Aircraft updatedAircraft){
         if(aircraftMap.get(id) != null){
             updatedAircraft.setAircraft_ID(id);
             aircraftMap.put(id,updatedAircraft);
@@ -30,7 +31,7 @@ public class AircraftService {
         return null;
     }
 
-    public Aircraft deleteAircraft(Integer id){
+    public Aircraft deleteAircraft(Long id){
         return aircraftMap.remove(id);
     }
 

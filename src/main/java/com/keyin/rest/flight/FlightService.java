@@ -9,10 +9,12 @@ import java.util.Map;
 @Service
 public class FlightService {
     private Map<Long, Flight> flightMap = new HashMap<Long, Flight>();
+    private long id = 1;
 
     public Flight createNewFlight(Flight newFlight){
-        newFlight.setFlight_ID(flightMap.size());
-        flightMap.put(Long.valueOf(flightMap.size()),newFlight);
+        newFlight.setFlight_ID(id);
+        flightMap.put(id,newFlight);
+        id++;
         return newFlight;
     }
 

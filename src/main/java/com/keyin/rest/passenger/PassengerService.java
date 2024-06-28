@@ -9,11 +9,13 @@ import java.util.Map;
 
 @Service
 public class PassengerService {
-    private static Map<Integer, Passenger> passengerMap = new HashMap<Integer, Passenger>();
-
+    private static Map<Long, Passenger> passengerMap = new HashMap<Long, Passenger>();
+    private long id = 1;
     // ADDING A NEW PASSENGER
     public Passenger createPassenger(Passenger newPassenger) {
-        passengerMap.put(passengerMap.size() + 1, newPassenger);
+        newPassenger.setPassenger_ID(id);
+        passengerMap.put(id, newPassenger);
+        id++;
         return newPassenger;
     }
 
@@ -23,12 +25,12 @@ public class PassengerService {
     }
 
     // PASSENGER SEARCH BY ID
-    public Passenger getPassenger(Integer passenger_ID) {
+    public Passenger getPassenger(Long passenger_ID) {
         return passengerMap.get(passenger_ID);
     }
 
     // UPDATING A SPECIFIC PASSENGER
-    public Passenger updatePassenger(Integer passenger_ID, Passenger updatedPassenger) {
+    public Passenger updatePassenger(Long passenger_ID, Passenger updatedPassenger) {
         if(passengerMap.get(passenger_ID) != null){
             Passenger passengerToUpdate = passengerMap.get(passenger_ID);
 
@@ -45,7 +47,7 @@ public class PassengerService {
     }
 
     // DELETING A SPECIFIC PASSENGER
-    public void deletePassenger(Integer passenger_ID) {
+    public void deletePassenger(Long passenger_ID) {
         passengerMap.remove(passenger_ID);
     }
 

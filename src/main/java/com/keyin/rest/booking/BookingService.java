@@ -9,10 +9,12 @@ import java.util.List;
 @Service
 public class BookingService {
     private Map<Long, Booking> bookingMap = new HashMap<Long, Booking>();
+    private long id = 1;
 
     public Booking createNewBooking(Booking newBooking){
-        newBooking.setBooking_ID(bookingMap.size());
-        bookingMap.put((long) bookingMap.size(), newBooking);
+        newBooking.setBooking_ID(id);
+        bookingMap.put(id, newBooking);
+        id++;
         return newBooking;
     }
 

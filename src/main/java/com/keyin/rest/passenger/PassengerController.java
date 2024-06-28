@@ -23,7 +23,7 @@ public class PassengerController {
     }
 
     @GetMapping("passenger/{id}")
-    public Passenger getPassenger(@PathVariable Integer id){
+    public Passenger getPassenger(@PathVariable Long id){
         return passengerService.getPassenger(id);
     }
 
@@ -33,12 +33,12 @@ public class PassengerController {
     }
 
     @PutMapping ("passenger/{id}")
-    public Passenger updatePassenger(@PathVariable Integer id, @RequestBody Passenger updatedPassenger){
+    public Passenger updatePassenger(@PathVariable Long id, @RequestBody Passenger updatedPassenger){
         return passengerService.updatePassenger(id, updatedPassenger);
     }
 
     @DeleteMapping ("passenger/{id}")
-    public void deletePassenger(@PathVariable Integer id){
+    public void deletePassenger(@PathVariable Long id){
         passengerService.deletePassenger(id);
     }
 
