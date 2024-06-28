@@ -12,12 +12,12 @@ public class Flight {
     private Airport origin;
     private Airport destination;
     private Aircraft aircraft;
-    private LocalDateTime departure_time;
-    private LocalDateTime arrival_time;
+    private String departure_time;
+    private String arrival_time;
     private Status status; // Enum or string
-    private Booking[][] flightBookings;
+    private Booking[][] bookings;
 
-    public Flight(long flight_ID, Airport origin, Airport destination, Aircraft aircraft, LocalDateTime departure_time, LocalDateTime arrival_time, Status status) {
+    public Flight(long flight_ID, Airport origin, Airport destination, Aircraft aircraft, String departure_time, String arrival_time, Status status) {
         this.flight_ID = flight_ID;
         this.origin = origin;
         this.destination = destination;
@@ -25,7 +25,7 @@ public class Flight {
         this.departure_time = departure_time;
         this.arrival_time = arrival_time;
         this.status = status;
-        this.flightBookings = new Booking[aircraft.getRows()][aircraft.getColumns()];
+        this.bookings = new Booking[aircraft.getRows()][aircraft.getColumns()];
     }
 
     // Getters and Setters
@@ -62,32 +62,32 @@ public class Flight {
         this.aircraft = aircraft;
     }
 
-    public LocalDateTime getDeparture_time() {
+    public String getDeparture_time() {
         return departure_time;
     }
 
-    public void setDeparture_time(LocalDateTime departure_time) {
+    public void setDeparture_time(String departure_time) {
         this.departure_time = departure_time;
     }
 
-    public LocalDateTime getArrival_time() {
+    public String getArrival_time() {
         return arrival_time;
     }
 
-    public void setArrival_time(LocalDateTime arrival_time) {
+    public void setArrival_time(String arrival_time) {
         this.arrival_time = arrival_time;
     }
 
     public void setBookings(Booking[][] bookings) {
-        this.flightBookings = bookings;
+        this.bookings = bookings;
     }
 
     public Booking[][] getBookings() {
-        return flightBookings;
+        return bookings;
     }
 
-    public Long getFlightDuration(){
-        return departure_time.until(arrival_time, ChronoUnit.MINUTES);
+    public Long calcululateFlightDuration(){
+        return LocalDateTime.parse(departure_time).until(LocalDateTime.parse(arrival_time), ChronoUnit.MINUTES);
     }
 
     public Status getStatus() {
@@ -104,11 +104,11 @@ public class Flight {
     }
 
     public boolean isOccupied(int row, int col){
-        return flightBookings[row-1][col-1] != null;
+        return bookings[row-1][col-1] != null;
     }
 
     public void setSeat(int row, int col, Booking booking){
-        flightBookings[row-1][col-1] = booking;
+        bookings[row-1][col-1] = booking;
     }
 
     /* TO DO
