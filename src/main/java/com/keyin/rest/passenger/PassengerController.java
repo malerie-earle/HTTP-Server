@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin
 public class PassengerController {
     @Autowired
-    private PassengerService passengerService;
+    private PassengerService passengerService = new PassengerService();
 
 
     @PostMapping("passenger")

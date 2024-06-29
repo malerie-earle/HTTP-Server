@@ -9,7 +9,7 @@ import java.util.List;
 @CrossOrigin
 public class AirportController {
     @Autowired
-    private AirportService airportService;
+    private AirportService airportService = new AirportService();
 
 
     @PostMapping("airport")

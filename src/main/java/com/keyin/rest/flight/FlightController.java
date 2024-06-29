@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 @RestController
 @CrossOrigin
 public class FlightController {
-    @Autowired
     private FlightService flightService = new FlightService();
     private BookingService bookingService = new BookingService();
 
