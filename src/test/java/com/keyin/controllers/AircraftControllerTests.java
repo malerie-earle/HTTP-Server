@@ -49,27 +49,27 @@ public class AircraftControllerTests {
     // Testing the ability to get aircraft by id
     @Test
     public void testGetAircraftByID(){
-        Aircraft ac1 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
-        Aircraft ac2 = new Aircraft(1,"A220-300","Air Canada",20,10, 2, 1);
-        Aircraft ac3 = new Aircraft(2,"A220-300","Pal Airlines",20,10, 2, 1);
+        Aircraft ac1 = new Aircraft(1,"A220-300","Airbus Corp",20,10, 2, 1);
+        Aircraft ac2 = new Aircraft(2,"A220-300","Air Canada",20,10, 2, 1);
+        Aircraft ac3 = new Aircraft(3,"A220-300","Pal Airlines",20,10, 2, 1);
         // We setup the Controller with some aircraft
         aircraftController.createAircraft(ac1);
         aircraftController.createAircraft(ac2);
         aircraftController.createAircraft(ac3);
 
         // The expected aircraft
-        Aircraft eac = new Aircraft(1,"A220-300","Air Canada",20,10, 2, 1);
+        Aircraft eac = new Aircraft(2,"A220-300","Air Canada",20,10, 2, 1);
         // The below might require an override of the equals method for aircraft
         // We compare the get from the controller to the desired aircraft
-        Assertions.assertEquals(aircraftController.getAircraft(1), eac);
+        Assertions.assertEquals(aircraftController.getAircraft((long)2), eac);
     }
 
     // Testing the ability to update aircraft by id
     @Test
     public void testUpdateAircraft(){
-        Aircraft ac1 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
-        Aircraft ac2 = new Aircraft(1,"A220-300","Air Canada",20,10, 2, 1);
-        Aircraft ac3 = new Aircraft(2,"A220-300","Pal Airlines",20,10, 2, 1);
+        Aircraft ac1 = new Aircraft(1,"A220-300","Airbus Corp",20,10, 2, 1);
+        Aircraft ac2 = new Aircraft(2,"A220-300","Air Canada",20,10, 2, 1);
+        Aircraft ac3 = new Aircraft(3,"A220-300","Pal Airlines",20,10, 2, 1);
         // We setup the Controller with some aircraft
         aircraftController.createAircraft(ac1);
         aircraftController.createAircraft(ac2);
@@ -77,26 +77,26 @@ public class AircraftControllerTests {
         // We create the updated aircraft
         Aircraft toBeUpdated = new Aircraft(1,"A220-300","Scott's Airline",20,10, 2, 1);
         // We invoke the update method
-        aircraftController.updateAircaft(1,toBeUpdated);
+        aircraftController.updateAircaft((long)1,toBeUpdated);
         // The expected aircraft
         Aircraft eac = new Aircraft(1,"A220-300","Scott's Airline",20,10, 2, 1);
         // The below might require an override of the equals method for aircraft
         // We check if the expected aircraft is equal to the actual aircraft
-        Assertions.assertEquals(aircraftController.getAircraft(1), eac);
+        Assertions.assertEquals(aircraftController.getAircraft((long)1), eac);
     }
 
     // Testing the ability to delete aircraft by id
     @Test
     public void testDeleteAircraft(){
-        Aircraft ac1 = new Aircraft(0,"A220-300","Airbus Corp",20,10, 2, 1);
-        Aircraft ac2 = new Aircraft(1,"A220-300","Air Canada",20,10, 2, 1);
-        Aircraft ac3 = new Aircraft(2,"A220-300","Pal Airlines",20,10, 2, 1);
+        Aircraft ac1 = new Aircraft(1,"A220-300","Airbus Corp",20,10, 2, 1);
+        Aircraft ac2 = new Aircraft(2,"A220-300","Air Canada",20,10, 2, 1);
+        Aircraft ac3 = new Aircraft(3,"A220-300","Pal Airlines",20,10, 2, 1);
         // We setup the Controller with some aircraft
         aircraftController.createAircraft(ac1);
         aircraftController.createAircraft(ac2);
         aircraftController.createAircraft(ac3);
         // We invoke the delete method
-        aircraftController.deleteAircraft(1);
+        aircraftController.deleteAircraft((long)2);
         // We check if the aircraft is not in the map
         Assertions.assertFalse(aircraftController.getAllAircrafts().contains(ac2));
     }
