@@ -121,13 +121,13 @@ const passengers = [
 }
 ];
 
-for (let i = 0; i < aircrafts.length; i++) {
-const aircraft = aircrafts[i];
+for (let i = 0; i < passengers.length; i++) {
+const passenger = passengers[i];
 pm.sendRequest({
 url: 'http://localhost:8080/passenger/',
 method: 'POST',
 header: 'Content-Type:application/json',
-body: JSON.stringify(aircraft)
+body: JSON.stringify(passenger)
 }, function (err, response) {
 if (err) {
 console.error(err);
